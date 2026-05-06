@@ -56,7 +56,7 @@ const GridGallery = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from("nav, footer", { opacity: 0, duration: 1 });
+     
 
       itemsRef.current.forEach((item, index) => {
         gsap.fromTo(

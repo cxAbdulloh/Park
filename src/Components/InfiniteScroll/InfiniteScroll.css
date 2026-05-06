@@ -1,8 +1,15 @@
 .marquee-container {
   width: 100%;
   overflow: hidden;
-  padding: 60px 0;
-  background: transparent;
+  margin-top: 80px;
+}
+
+.marquee-text {
+  text-align: center;
+  font-size: clamp(1.6rem, 3.2vw, 2.5rem);
+  color: #1a1a1a;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .marquee-content {

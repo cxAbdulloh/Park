@@ -7,6 +7,7 @@ import Footer from "./Components/Footer/Footer.jsx";
 import Offer from './Components/Offer/Offer.jsx';
 import OfferSights from './Components/OfferSights/OfferSights.jsx';
 import GridGallery from './Components/GridGallery/GridGallery.jsx';
+import Map from './Components/Map/Map.jsx';
 
 function App() {
     return (
@@ -17,8 +18,9 @@ function App() {
             <OfferSights/>
             <GridGallery/>
             <InfiniteScroll />
+            <Map/>
             <Footer/>
-            {/*<ScrollToTop />*/}
+            {/* <ScrollToTop /> */}
         </div>
     );
 }

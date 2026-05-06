@@ -12,6 +12,7 @@ const InfiniteScroll = () => {
 
   return (
     <div className="marquee-container">
+      <h1 className="marquee-text">Cafe & Restourants</h1>
       <div className="marquee-content">
         {images.map((logo, index) => (
           <div className="image-card" key={index}>
