@@ -1,28 +1,26 @@
-import React from 'react';
-import Navbar from './components/Navbar/Navbar';
-import Hero from './components/Hero/Hero';
-import InfiniteScroll from './components/InfiniteScroll/InfiniteScroll';
+import React from "react";
+import Navbar from "./Components/Navbar/Navbar";
+import Hero from "./Components/Hero/Hero";
+import InfiniteScroll from "./Components/InfiniteScroll/InfiniteScroll";
+import Footer from "./Components/Footer/Footer.jsx";
+import Offer from "./Components/Offer/Offer.jsx";
+import OfferSights from "./Components/OfferSights/OfferSights.jsx";
+import GridGallery from "./Components/GridGallery/GridGallery.jsx";
+import Map from "./Components/Map/Map.jsx";
 
-import Footer from "./components/Footer/Footer.jsx";
-import Offer from './components/Offer/Offer.jsx';
-import OfferSights from './components/OfferSights/OfferSights.jsx';
-import GridGallery from './components/GridGallery/GridGallery.jsx';
-import Map from './Components/Map/Map.jsx';
-
-
-function App() {
-    return (
-        <div className="App">
-            <Navbar />
-            <Hero />
-            <Offer/>
-            <OfferSights/>
-            <GridGallery/>
-            <InfiniteScroll />
-            <Map/>
-            <Footer/>
-        </div>
-    );
+const App = () => {
+  return (
+    <>
+      <Navbar />
+      <Hero />
+      <Offer />
+      <OfferSights />
+      <GridGallery />
+      <InfiniteScroll />
+      <Map />
+      <Footer />
+    </>
+  );
 }
 
 export default App;
