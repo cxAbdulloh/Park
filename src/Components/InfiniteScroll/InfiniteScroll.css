@@ -1,0 +1,71 @@
+.marquee-container {
+  width: 100%;
+  overflow: hidden;
+  padding: 60px 0;
+  background: transparent;
+}
+
+.marquee-content {
+  display: flex;
+  gap: 80px;
+  width: max-content;
+  align-items: center;
+  animation: scrollAnimation 40s linear infinite;
+}
+
+.image-card {
+  min-width: 150px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.image-card img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.image-card img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+@keyframes scrollAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 15px));
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 50px));
+  }
+}
+
+@media (max-width: 768px) {
+  .image-card {
+    width: 150px;
+    height: 150px;
+  }
+  .marquee-content {
+    animation-duration: 20s;
+  }
+}

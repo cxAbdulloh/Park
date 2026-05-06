@@ -1,0 +1,153 @@
+.apple-footer {
+  position: relative;
+  background: #f5f5f7;
+  padding: 80px 0 30px;
+  overflow: hidden;
+}
+
+.footer-video-wrap {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.footer-video {
+  width: 100%;
+  height: 110%;
+  object-fit: cover;
+  filter: grayscale(1);
+  opacity: 0.06;
+}
+
+.footer-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 22px;
+}
+
+.footer-main-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.footer-logo img {
+  width: 75px;
+  height: auto;
+}
+
+.footer-logo span {
+  font-weight: 600;
+  font-size: 18px;
+  color: #1d1d1f;
+}
+
+.branding-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #86868b;
+  max-width: 240px;
+}
+
+.footer-col h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1d1d1f;
+  margin-bottom: 15px;
+  letter-spacing: -0.01em;
+}
+
+.footer-col ul {
+  padding: 0;
+  list-style: none;
+}
+
+.footer-col ul li {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  color: #515154;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #223b77;
+  text-decoration: underline;
+}
+
+.contact-list li {
+  color: #515154;
+}
+
+.social-minimal {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  filter: grayscale(1);
+  opacity: 0.6;
+}
+
+.footer-divider {
+  border: 0;
+  border-top: 1px solid #d2d2d7;
+  margin-bottom: 20px;
+}
+
+.footer-legal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  color: #86868b;
+}
+
+.legal-links {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.legal-links a {
+  color: #86868b;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.legal-links a:hover {
+  color: #223b77;
+}
+
+.dot-separator {
+  color: #d2d2d7;
+}
+
+@media (max-width: 768px) {
+  .footer-main-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .branding-col {
+    grid-column: span 2;
+  }
+
+  .footer-legal {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
