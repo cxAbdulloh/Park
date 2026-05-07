@@ -31,6 +31,7 @@
   fill: #fff;
   transition: fill 0.5s ease;
 }
+
 .left-panel {
   width: 50%;
   height: 100%;
@@ -183,7 +184,6 @@
   align-items: flex-end;
 }
 
-/* Statistika qismi */
 .stat-box {
   display: flex;
   flex-direction: column;
@@ -203,7 +203,6 @@
   margin-top: 5px;
 }
 
-/* Aylanuvchi tugma effekti */
 .explore-circle {
   width: 100px;
   height: 100px;
@@ -252,7 +251,6 @@
   }
 }
 
-/* Mobilda bularni tozalash */
 @media (max-width: 768px) {
   .left-panel {
     padding: 40px 20px;

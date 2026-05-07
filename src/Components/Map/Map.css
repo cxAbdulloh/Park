@@ -1,37 +1,12 @@
-:root {
-  --c-surface: #f5f5f7;
-  --c-border: rgba(0, 0, 0, 0.06);
-  --c-text: #1a1a1a;
-  --c-muted: #666666;
-  --c-subtle: #acacac;
-  --c-accent: #1a1a1a;
-  --c-accent-bg: rgba(26, 26, 26, 0.06);
-  --c-danger: #e74c3c;
-  --c-danger-bg: rgba(231, 76, 60, 0.07);
-  --radius-sm: 10px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
-  --radius-xl: 28px;
-  --shadow-xs: 0 1px 3px rgba(0, 0, 0, 0.06);
-  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 4px 24px rgba(0, 0, 0, 0.1);
-  --ease: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-
 .ms-root {
   display: flex;
-  border-radius: var(--radius-xl);
+  border-radius: 20px;
   overflow: hidden;
   max-width: 1300px;
   margin: 150px auto 80px;
   height: 540px;
-  box-shadow:
-    var(--shadow-md),
-    0 0 0 1px var(--c-border);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(0, 0, 0, 0.06);
 }
-
 
 .ms-panel {
   width: 300px;
@@ -42,14 +17,12 @@
   gap: 22px;
   overflow-y: auto;
   scrollbar-width: none;
-  background: var(--c-bg);
-  border-right: 1px solid var(--c-border);
+  border-right: 1px solid rgba(0, 0, 0, 0.06);
 }
 .ms-panel::-webkit-scrollbar {
   display: none;
 }
 
-/* ── Destination card ────────────────────────────────────────── */
 .ms-dest {
   display: flex;
   align-items: flex-start;
@@ -60,14 +33,15 @@
   flex-shrink: 0;
   width: 44px;
   height: 44px;
-  border-radius: var(--radius-sm);
-  background: var(--c-surface);
-  color: var(--c-text);
+  border-radius: 10px;
+  background: #f5f5f7;
+  color: #1a1a1a;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s var(--ease-spring);
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
+
 .ms-dest__pin:hover {
   transform: scale(1.06);
 }
@@ -78,25 +52,23 @@
   font-weight: 500;
   line-height: 1.35;
   letter-spacing: -0.01em;
-  color: var(--c-text);
+  color: #1a1a1a;
 }
 
 .ms-dest__sub {
   margin: 3px 0 0;
   font-size: 12px;
-  color: var(--c-muted);
+  color: #666;
   letter-spacing: 0.01em;
 }
 
-/* ── Divider ─────────────────────────────────────────────────── */
 .ms-divider {
   height: 1px;
-  background: var(--c-border);
+  background: rgba(0, 0, 0, 0.06);
   margin: 0;
   flex-shrink: 0;
 }
 
-/* ── Mode buttons ────────────────────────────────────────────── */
 .ms-modes {
   display: flex;
   gap: 6px;
@@ -109,27 +81,23 @@
   align-items: center;
   gap: 5px;
   padding: 12px 4px 10px;
-  border-radius: var(--radius-md);
-  border: 1.5px solid var(--c-border);
+  border-radius: 15px;
+  border: 1.5px solid rgba(0, 0, 0, 0.06);
   background: transparent;
   cursor: pointer;
-  color: var(--c-muted);
-  font-family: var(--font);
+  color: #1a1a1a;
   transition:
-    border-color 0.18s var(--ease),
-    background 0.18s var(--ease),
-    color 0.18s var(--ease),
-    transform 0.15s var(--ease-spring);
+    border-color 0.18s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    background 0.18s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    color 0.18s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
   outline: none;
   -webkit-tap-highlight-color: transparent;
 }
 
-
-
 .ms-mode-btn:active {
   transform: scale(0.96);
 }
-
 
 .ms-mode-btn__icon {
   display: flex;
@@ -147,7 +115,6 @@
   letter-spacing: 0.04em;
 }
 
-/* ── From / To ───────────────────────────────────────────────── */
 .ms-from {
   display: flex;
   flex-direction: column;
@@ -159,7 +126,7 @@
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--c-subtle);
+  color: #acacac;
 }
 
 .ms-input-row {
@@ -179,29 +146,26 @@
   width: 100%;
   height: 46px;
   padding: 0 38px 0 14px;
-  border: 1.5px solid var(--c-border);
-  border-radius: var(--radius-sm);
-  font-family: var(--font);
+  border: 1.5px solid rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
   font-size: 13px;
   font-weight: 400;
-  color: var(--c-text);
-  background: var(--c-bg);
+  color: #1a1a1a;
   outline: none;
   box-sizing: border-box;
   transition:
-    border-color 0.18s var(--ease),
-    box-shadow 0.18s var(--ease),
-    background 0.18s var(--ease);
+    border-color 0.18s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    box-shadow 0.18s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    background 0.18s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .ms-input::placeholder {
-  color: var(--c-subtle);
+  color: #acacac;
 }
 
 .ms-input:focus {
-  border-color: var(--c-text);
-  background: var(--c-bg);
-  box-shadow: 0 0 0 3px var(--c-accent-bg);
+  border-color: #1a1a1a;
+  box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.06);
 }
 
 .ms-geo-btn {
@@ -210,16 +174,16 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: var(--c-subtle);
+  color: #acacac;
   padding: 0;
   display: flex;
   align-items: center;
   transition:
-    color 0.15s var(--ease),
-    transform 0.15s var(--ease-spring);
+    color 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 .ms-geo-btn:hover {
-  color: var(--c-text);
+  color: #1a1a1a;
   transform: scale(1.1);
 }
 
@@ -230,35 +194,25 @@
   background: rgb(219, 73, 73);
   color: #fff;
   border: none;
-  border-radius: var(--radius-sm);
+  border-radius: 10px;
   font-size: 18px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition:
-    background 0.15s var(--ease),
-    transform 0.15s var(--ease-spring),
-    box-shadow 0.15s var(--ease);
-  box-shadow: var(--shadow-xs);
+    background 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }
-/* .ms-go-btn:hover {
-  background: #333;
-  box-shadow: var(--shadow-sm);
-  transform: translateY(-1px);
-} */
-/* .ms-go-btn:active {
-  transform: scale(0.93);
-  box-shadow: none;
-} */
 
-/* ── Travel time card ────────────────────────────────────────── */
 .ms-time-card {
-  background: var(--c-surface);
-  border: 1px solid var(--c-border);
-  border-radius: var(--radius-md);
+  background: #f5f5f7;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
   padding: 16px 18px;
-  animation: ms-slide-in 0.28s var(--ease) both;
+  animation: ms-slide-in 0.28s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @keyframes ms-slide-in {
@@ -281,13 +235,13 @@
 .ms-time-card__value {
   font-size: 32px;
   font-weight: 300;
-  color: var(--c-text);
+  color: #1a1a1a;
   letter-spacing: -0.04em;
   line-height: 1;
 }
 
 .ms-time-card__mode-icon {
-  color: var(--c-muted);
+  color: #666;
 }
 .ms-time-card__mode-icon svg {
   width: 22px;
@@ -297,7 +251,7 @@
 .ms-time-card__meta {
   margin-top: 6px;
   font-size: 12px;
-  color: var(--c-subtle);
+  color: #acacac;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -306,11 +260,10 @@
   font-size: 8px;
 }
 
-/* ── Status ──────────────────────────────────────────────────── */
 .ms-status {
   margin: 0;
   font-size: 12px;
-  color: var(--c-subtle);
+  color: #acacac;
   display: flex;
   align-items: center;
   gap: 7px;
@@ -334,8 +287,8 @@
   display: inline-block;
   width: 12px;
   height: 12px;
-  border: 1.5px solid var(--c-border);
-  border-top-color: var(--c-text);
+  border: 1.5px solid rgba(0, 0, 0, 0.06);
+  border-top-color: #1a1a1a;
   border-radius: 50%;
   animation: ms-spin 0.75s linear infinite;
   flex-shrink: 0;
@@ -347,36 +300,32 @@
   }
 }
 
-/* ── Hint ────────────────────────────────────────────────────── */
 .ms-hint {
   margin: auto 0 0;
   font-size: 11px;
-  color: var(--c-subtle);
+  color: #acacac;
   line-height: 1.65;
   letter-spacing: 0.01em;
 }
 
-/* ── Map area ────────────────────────────────────────────────── */
 .ms-map {
   flex: 1;
   min-width: 0;
-  height: 100%; /* row layout: fills the fixed-height flex container */
-  align-self: stretch; /* guarantees stretch even if parent align-items is overridden */
-  position: relative; /* Leaflet absolutely positions its layers inside */
+  height: 100%;
+  align-self: stretch;
+  position: relative;
 }
 
-/* ── Leaflet overrides ───────────────────────────────────────── */
 .leaflet-popup-content-wrapper {
-  border-radius: var(--radius-md) !important;
-  box-shadow: var(--shadow-md) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1) !important;
   padding: 0 !important;
 }
 .leaflet-popup-content {
   margin: 12px 16px !important;
-  font-family: var(--font) !important;
   font-size: 13px !important;
   line-height: 1.5 !important;
-  color: var(--c-text) !important;
+  color: #1a1a1a !important;
 }
 .leaflet-popup-tip-container {
   margin-top: -1px !important;
@@ -384,30 +333,27 @@
 
 .leaflet-control-zoom {
   border: none !important;
-  box-shadow: var(--shadow-sm) !important;
-  border-radius: var(--radius-sm) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08) !important;
+  border-radius: 10px !important;
   overflow: hidden;
 }
 .leaflet-control-zoom a {
   border-radius: 0 !important;
   border: none !important;
-  border-bottom: 1px solid var(--c-border) !important;
-  color: var(--c-text) !important;
+  border-bottom: 1px solid  !important;
+  color: #1a1a1a !important;
   font-size: 16px !important;
   font-weight: 300 !important;
-  background: var(--c-bg) !important;
-  transition: background 0.15s var(--ease) !important;
+  transition: background 0.15s  cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
 }
 .leaflet-control-zoom a:last-child {
   border-bottom: none !important;
 }
 .leaflet-control-zoom a:hover {
-  background: var(--c-surface) !important;
-  color: var(--c-text) !important;
+  background: #acacac !important;
+  color: #1a1a1a !important;
 }
 
-
-/* ── Responsive ──────────────────────────────────────────────── */
 @media (max-width: 900px) {
   .ms-root {
     max-width: 100%;
@@ -425,19 +371,18 @@
 @media (max-width: 640px) {
   .ms-root {
     flex-direction: column;
-    height: auto !important; /* override the 520px from 900px breakpoint */
-    border-radius: var(--radius-lg);
+    height: auto !important;
+    border-radius: 20px;
     margin: 24px 12px 40px;
   }
   .ms-panel {
     width: 100%;
     min-width: unset;
     border-right: none;
-    border-bottom: 1px solid var(--c-border);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
     padding: 20px 18px;
     gap: 16px;
   }
-  /* column layout: map needs explicit height, override the 100% from base */
   .ms-map {
     height: 360px !important;
     flex: none;

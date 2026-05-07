@@ -77,17 +77,17 @@ const FAQS = [
   },
 ];
 
-/* ── Single FAQ row ─────────────────────────────────────── */
+
 const FaqItem = ({ item, index, isOpen, onToggle }) => (
   <div
-    className={`faq-item${isOpen ? " faq-item--open" : ""}`}
+    className={`faq-item${isOpen ? " faq-item-open" : ""}`}
     onClick={onToggle}
     data-faq-item
   >
-    <div className="faq-item__head">
-      <span className="faq-item__num">0{index + 1}</span>
-      <span className="faq-item__q">{item.q}</span>
-      <span className="faq-item__icon" aria-hidden="true">
+    <div className="faq-item-head">
+      <span className="faq-item-num">0{index + 1}</span>
+      <span className="faq-item-q">{item.q}</span>
+      <span className="faq-item-icon" aria-hidden="true">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
           <path
             d="M3 6l5 5 5-5"
@@ -99,13 +99,12 @@ const FaqItem = ({ item, index, isOpen, onToggle }) => (
         </svg>
       </span>
     </div>
-    <div className="faq-item__body">
-      <p className="faq-item__a">{item.a}</p>
+    <div className="faq-item-body">
+      <p className="faq-item-a">{item.a}</p>
     </div>
   </div>
 );
 
-/* ── Main component ─────────────────────────────────────── */
 const FaqSection = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -123,7 +122,6 @@ const FaqSection = () => {
     const ctx = gsap.context(() => {
       const ease = "power3.out";
 
-      /* 1 · Eyebrow — fade + rise */
       gsap.from(eyebrowRef.current, {
         scrollTrigger: { trigger: eyebrowRef.current, start: "top 88%" },
         y: 20,
@@ -132,7 +130,6 @@ const FaqSection = () => {
         ease,
       });
 
-      /* 2 · Title lines — clip-reveal (overflow hidden on wrapper) */
       const lines = titleRef.current.querySelectorAll(".faq-title__line");
       gsap.from(lines, {
         scrollTrigger: { trigger: titleRef.current, start: "top 85%" },
@@ -143,7 +140,6 @@ const FaqSection = () => {
         ease: "power4.out",
       });
 
-      /* 3 · Subtitle — fade + rise */
       gsap.from(subtitleRef.current, {
         scrollTrigger: { trigger: subtitleRef.current, start: "top 88%" },
         y: 16,
@@ -153,7 +149,6 @@ const FaqSection = () => {
         ease,
       });
 
-      /* 4 · Stats cards — staggered pop-in */
       const cards = statsRef.current.querySelectorAll(".faq-stat-card");
       gsap.from(cards, {
         scrollTrigger: { trigger: statsRef.current, start: "top 86%" },
@@ -172,18 +167,17 @@ const FaqSection = () => {
   return (
     <section className="faq-section" ref={sectionRef}>
       <div className="faq-inner">
-        {/* ── Header ── */}
         <div className="faq-header">
           <p className="faq-eyebrow" ref={eyebrowRef}>
             Central Park · Tashkent
           </p>
 
           <h2 className="faq-title" ref={titleRef}>
-            <span className="faq-title__wrap">
-              <span className="faq-title__line">Frequently asked</span>
+            <span className="faq-title-wrap">
+              <span className="faq-title-line">Frequently asked</span>
             </span>
-            <span className="faq-title__wrap">
-              <em className="faq-title__line">questions</em>
+            <span className="faq-title-wrap">
+              <em className="faq-title-line">questions</em>
             </span>
           </h2>
 
@@ -192,7 +186,6 @@ const FaqSection = () => {
           </p>
         </div>
 
-        {/* ── Stats grid ── */}
         <div className="faq-stats" ref={statsRef}>
           {STATS.map((s) => (
             <div
@@ -200,20 +193,18 @@ const FaqSection = () => {
               className="faq-stat-card"
               style={{ background: s.bg }}
             >
-              <span className="faq-stat-card__num" style={{ color: s.num_c }}>
+              <span className="faq-stat-card-num" style={{ color: s.num_c }}>
                 {s.num}
               </span>
-              <span className="faq-stat-card__label" style={{ color: s.sub_c }}>
+              <span className="faq-stat-card-label" style={{ color: s.sub_c }}>
                 {s.label}
               </span>
             </div>
           ))}
         </div>
 
-        {/* ── Divider ── */}
         <div className="faq-divider" ref={dividerRef} />
 
-        {/* ── Accordion ── */}
         <div className="faq-list" ref={listRef}>
           {FAQS.map((item, i) => (
             <FaqItem

@@ -72,7 +72,6 @@ const OfferSights = () => {
         });
       }
 
-
       cardRefs.current.forEach((card, i) => {
         if (!card) return;
         const icon = iconRefs.current[i];

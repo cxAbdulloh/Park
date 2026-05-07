@@ -22,13 +22,14 @@ const features = [
   },
 ];
 
-export default function Offer({ videoSrc }) {
+export default function Offer() {
   const sectionRef = useRef(null);
   const videoWrapRef = useRef(null);
   const titleRef = useRef(null);
   const descRefs = useRef([]);
   const featureRefs = useRef([]);
   const dividerRef = useRef(null);
+
 
   useEffect(() => {
     const ctx = gsap.context(() => {

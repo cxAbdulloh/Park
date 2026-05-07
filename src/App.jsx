@@ -20,7 +20,7 @@ const App = () => {
       <FaqSection/>
       <GridGallery />
       <InfiniteScroll />
-      <CafeSection/>
+      {/*<CafeSection/>*/}
       <Map />
       <Footer />
     </>
