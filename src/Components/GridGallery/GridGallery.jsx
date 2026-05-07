@@ -9,44 +9,41 @@ const galleryItems = [
   {
     id: 1,
     title: "Playgroun",
-    category: "Showcase",
     img: "https://images.unsplash.com/photo-1575783970733-1aaedde1db74?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     col: "column-md-4",
   },
   {
     id: 2,
     title: "Bumber Cars",
-    category: "Showcase",
-    img: "https://adventureland.us/wp-content/uploads/2018/10/bumper-cars-6.jpg",
+    img: "https://www.pexels.com/download/video/29765973/",
     col: "column-md-4",
+    isVideo: true,
   },
   {
     id: 3,
     title: "Coffee",
-    category: "Showcase",
     img: "https://centralpark.uz/wp-content/uploads/2023/06/200373095_1178289942632663_1382384699518626120_n.jpg",
     col: "column-md-4",
   },
   {
     id: 4,
     title: "Phone",
-    category: "Showcase",
-    img: "https://centralpark.uz/wp-content/uploads/2023/06/200803266_1178289935965997_3120841426325841774_n.jpg",
+    img: "https://www.pexels.com/download/video/35876721/",
     col: "column-md-6",
+    isVideo: true
   },
   {
     id: 5,
     title: "Keyboard",
-    category: "Showcase",
     img: "https://api.zamperla.com/resource/11167",
     col: "column-md-6",
   },
   {
     id: 6,
     title: "Wrist Watch",
-    category: "Showcase",
-    img: "https://api.zamperla.com/resource/16129",
+    img: "https://www.pexels.com/download/video/13279753/",
     col: "column-xs-12",
+    isVideo: true
   },
 ];
 
@@ -56,8 +53,6 @@ const GridGallery = () => {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-     
-
       itemsRef.current.forEach((item, index) => {
         gsap.fromTo(
           item,
@@ -111,11 +106,24 @@ const GridGallery = () => {
                 onMouseMove={(e) => handleMouseMove(e, index)}
               >
                 <figure className="img-container">
-                  <img src={item.img} alt={item.title} loading="lazy" />
+                  {item.isVideo ? (
+                    <video
+                      src={item.img}
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                      className="gallery-video"
+                    />
+                  ) : (
+                    <img src={item.img} alt={item.title} loading="lazy" />
+                  )}
+
                   <figcaption className="img-content">
                     <h2 className="title">{item.title}</h2>
                     <h3 className="category">{item.category}</h3>
                   </figcaption>
+
                   <span className="img-content-hover">
                     <h2 className="title">{item.title}</h2>
                     <h3 className="category">{item.category}</h3>

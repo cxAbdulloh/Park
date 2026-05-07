@@ -12,13 +12,13 @@ import icon4 from "../../assets/icon_4.png";
 gsap.registerPlugin(ScrollTrigger);
 
 const features = [
-  { id: 1, icon: assets.icon1, label: "Новые европейские аттракционы" },
-  { id: 2, icon: assets.icon2, label: "Большая детская площадка" },
-  { id: 3, icon: assets.icon3, label: "Самые весёлые мероприятия" },
+  { id: 1, icon: assets.icon1, label: "New European attractions" },
+  { id: 2, icon: assets.icon2, label: "Large playground" },
+  { id: 3, icon: assets.icon3, label: "The most fun events" },
   {
     id: 4,
     icon: assets.icon4,
-    label: "Работаем без выходных с 10:00 до 23:00",
+    label: "We work seven days a week from 10:00 to 23:00",
   },
 ];
 

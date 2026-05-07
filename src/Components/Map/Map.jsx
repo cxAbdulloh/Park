@@ -14,60 +14,105 @@ const NOMINATIM = "https://nominatim.openstreetmap.org/search";
 const MODES = [
   {
     id: "car",
-    label: "Mashina",
+    label: "Car",
     profile: "driving",
     multiplier: 1,
     icon: (
       <svg
+        width="800px"
+        height="800px"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        stroke="red"
       >
-        <path d="M18 17H6a2 2 0 01-2-2v-4l2.5-5h11L20 11v4a2 2 0 01-2 2z" />
-        <circle cx="7.5" cy="17" r="2" />
-        <circle cx="16.5" cy="17" r="2" />
-        <path d="M4 11h16" />
+        <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+
+        <g id="SVGRepo_iconCarrier">
+          {" "}
+          <path
+            d="M3 8L5.72187 10.2682C5.90158 10.418 6.12811 10.5 6.36205 10.5H17.6379C17.8719 10.5 18.0984 10.418 18.2781 10.2682L21 8M6.5 14H6.51M17.5 14H17.51M8.16065 4.5H15.8394C16.5571 4.5 17.2198 4.88457 17.5758 5.50772L20.473 10.5777C20.8183 11.1821 21 11.8661 21 12.5623V18.5C21 19.0523 20.5523 19.5 20 19.5H19C18.4477 19.5 18 19.0523 18 18.5V17.5H6V18.5C6 19.0523 5.55228 19.5 5 19.5H4C3.44772 19.5 3 19.0523 3 18.5V12.5623C3 11.8661 3.18166 11.1821 3.52703 10.5777L6.42416 5.50772C6.78024 4.88457 7.44293 4.5 8.16065 4.5ZM7 14C7 14.2761 6.77614 14.5 6.5 14.5C6.22386 14.5 6 14.2761 6 14C6 13.7239 6.22386 13.5 6.5 13.5C6.77614 13.5 7 13.7239 7 14ZM18 14C18 14.2761 17.7761 14.5 17.5 14.5C17.2239 14.5 17 14.2761 17 14C17 13.7239 17.2239 13.5 17.5 13.5C17.7761 13.5 18 13.7239 18 14Z"
+            stroke="#00000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />{" "}
+        </g>
       </svg>
     ),
   },
   {
     id: "foot",
-    label: "Piyoda",
+    label: "Walk",
     profile: "foot",
     multiplier: 1,
     icon: (
       <svg
+        width="800px"
+        height="800px"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        stroke="#4f4dff"
       >
-        <circle cx="13" cy="4" r="1.4" fill="currentColor" stroke="none" />
-        <path d="M8 21l2.5-6.5L13 17l2.5-7L18 13" />
-        <path d="M9.5 12l1-4 2.5-2 3.5 1.5" />
+        <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+
+        <g id="SVGRepo_iconCarrier">
+          {" "}
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M13 6C14.1046 6 15 5.10457 15 4C15 2.89543 14.1046 2 13 2C11.8955 2 11 2.89543 11 4C11 5.10457 11.8955 6 13 6ZM11.0528 6.60557C11.3841 6.43992 11.7799 6.47097 12.0813 6.68627L13.0813 7.40056C13.3994 7.6278 13.5559 8.01959 13.482 8.40348L12.4332 13.847L16.8321 20.4453C17.1384 20.9048 17.0143 21.5257 16.5547 21.8321C16.0952 22.1384 15.4743 22.0142 15.168 21.5547L10.5416 14.6152L9.72611 13.3919C9.58336 13.1778 9.52866 12.9169 9.57338 12.6634L10.1699 9.28309L8.38464 10.1757L7.81282 13.0334C7.70445 13.575 7.17759 13.9261 6.63604 13.8178C6.09449 13.7094 5.74333 13.1825 5.85169 12.641L6.51947 9.30379C6.58001 9.00123 6.77684 8.74356 7.05282 8.60557L11.0528 6.60557ZM16.6838 12.9487L13.8093 11.9905L14.1909 10.0096L17.3163 11.0513C17.8402 11.226 18.1234 11.7923 17.9487 12.3162C17.7741 12.8402 17.2078 13.1234 16.6838 12.9487ZM6.12844 20.5097L9.39637 14.7001L9.70958 15.1699L10.641 16.5669L7.87159 21.4903C7.60083 21.9716 6.99111 22.1423 6.50976 21.8716C6.0284 21.6008 5.85768 20.9911 6.12844 20.5097Z"
+            fill="#00000"
+          />{" "}
+        </g>
       </svg>
     ),
   },
   {
     id: "bus",
-    label: "Avtobus",
+    label: "Bus",
     profile: "driving",
     multiplier: 1.4,
     icon: (
       <svg
+        width="800px"
+        height="800px"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        stroke="green"
       >
-        <rect x="3" y="5" width="18" height="13" rx="2" />
-        <path d="M3 10h18M9 19l-1 2M15 19l1 2" />
-        <circle cx="7.5" cy="15" r="1.1" fill="currentColor" stroke="none" />
-        <circle cx="16.5" cy="15" r="1.1" fill="currentColor" stroke="none" />
+        <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+
+        <g id="SVGRepo_iconCarrier">
+          {" "}
+          <path
+            d="M5 6V15.8C5 16.9201 5 17.4802 5.21799 17.908C5.40973 18.2843 5.71569 18.5903 6.09202 18.782C6.51984 19 7.07989 19 8.2 19H15.8C16.9201 19 17.4802 19 17.908 18.782C18.2843 18.5903 18.5903 18.2843 18.782 17.908C19 17.4802 19 16.9201 19 15.8V6M5 6C5 6 5 3 12 3C19 3 19 6 19 6M5 6H19M5 13H19M17 21V19M7 21V19M8 16H8.01M16 16H16.01"
+            stroke="#00000"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />{" "}
+        </g>
       </svg>
     ),
   },
@@ -156,26 +201,27 @@ export default function Map() {
     destMark.current = L.marker([DEST.lat, DEST.lng], {
       icon: L.divIcon({
         html: `
-              <div style="
-                width: 30px; height: 30px;
-                background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
-                border-radius: 50% 50% 50% 0;
-                transform: rotate(-45deg);
-                display: flex; align-items: center; justify-content: center;
-                border: 2px solid white;
-                box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-              ">
-                <div style="
-                  width: 10px; height: 10px;
-                  background: white;
-                  border-radius: 50%;
-                  transform: rotate(45deg);
-                "></div>
-              </div>
-            `,
+          <div style="
+            width: 32px; height: 32px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+          ">
+            <div style="
+              width: 12px; height: 12px;
+              background: #ff3b30; /* Apple Red */
+              border-radius: 50%;
+              box-shadow: 0 0 10px rgba(255, 59, 48, 0.5);
+            "></div>
+          </div>
+        `,
         className: "",
-        iconSize: [30, 30],
-        iconAnchor: [15, 30],
+        iconSize: [32, 32],
+        iconAnchor: [16, 16],
       }),
     })
       .addTo(map)

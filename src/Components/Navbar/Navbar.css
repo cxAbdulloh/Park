@@ -1,5 +1,5 @@
 .navbar {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -159,7 +159,8 @@
   z-index: 2000;
   opacity: 0;
   visibility: hidden;
-  transition: 0.4s ease-in-out;
+  clip-path: circle(0% at 90% 5%);
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hamburger-overlay.open {
@@ -369,11 +370,6 @@
   .overlay-link {
     font-size: 22px !important;
   }
-}
-
-.hamburger-overlay {
-  clip-path: circle(0% at 90% 5%);
-  transition: clip-path 0.6s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .hamburger-overlay.open {

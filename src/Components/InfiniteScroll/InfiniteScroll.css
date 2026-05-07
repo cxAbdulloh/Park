@@ -1,5 +1,6 @@
 .marquee-container {
-  width: 100%;
+  max-width: 1250px;
+  margin: auto;
   overflow: hidden;
   margin-top: 80px;
 }
