@@ -185,13 +185,14 @@ export default function Map() {
 
     const map = L.map(mapEl.current, {
       zoomControl: false,
+      attributionControl: false,
       crs: L.CRS.EPSG3857,
     }).setView([DEST.lat, DEST.lng], 14);
 
     L.tileLayer(
       "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
       {
-        attribution: "© OpenStreetMap © CARTO",
+        attribution: false,
         maxZoom: 19,
       }
     ).addTo(map);
